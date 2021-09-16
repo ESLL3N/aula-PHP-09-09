@@ -5,10 +5,9 @@ use PDO;
 
 $bd = new PDO('mysql:host=localhost;dbname=biblioteca', 'root', '');
 
-$comando = $bd->prepare('INSERT INTO generos(nome) values (:nome)');
-$comando-> execute(['nome' => $_POST['nome']]);
-
-
+$comando = $bd->prepare('select * from generos');
+$comando-> execute();
+$generos = $comando->fetchAll(PDO::FETCH_ASSOC);
 
 
 ?>
