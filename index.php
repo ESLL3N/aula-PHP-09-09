@@ -24,18 +24,5 @@ $comando-> execute(['nome' => $_POST['nome']]);
         <?php var_dump($generos); ?>
     </pre>
 
-
-    <table>
-        <tr>
-            <th>ID</th>
-            <th> Nome</th>
-        </tr>
-    <?php foreach($generos as $g): ?>
-
-        <tr>
-         <td><?= $g ?>>
-        </td>
-     </tr>
-    </table>
 </body>
 </html>
