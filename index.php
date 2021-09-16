@@ -2,12 +2,13 @@
 require_once './vendor/autoload.php';
 
 use PDO;
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+
 $bd = new PDO('mysql:host=localhost;dbname=biblioteca', 'root', '');
+
 $comando = $bd->prepare('INSERT INTO generos(nome) values (:nome)');
 $comando-> execute(['nome' => $_POST['nome']]);
 
-}
+
 
 
 ?>
@@ -19,10 +20,18 @@ $comando-> execute(['nome' => $_POST['nome']]);
     <title>BIBLIOTECA</title>
 </head>
 <body>
-    <a href="insert.php">Novo genero</a>
-    <pre>
-        <?php var_dump($generos); ?>
-    </pre>
 
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+            </tr>
+            <?php foreach($generos as $g): ?>
+                <tr>
+                    <td><?= $g['id']?></td>
+                    <td><?=$g['nome'] ?></td>
+                </tr>
+                <?php endforeach ?>
+        </table>
 </body>
 </html>
