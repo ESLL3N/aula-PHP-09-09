@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'ExemploPDOMysql\\' => array($baseDir . '/src'),
+    'AULA_PHP\\' => array($baseDir . '/src'),
 );

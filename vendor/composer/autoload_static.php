@@ -7,14 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit0aaa602e3f12021a3e571833d8c56248
 {
     public static $prefixLengthsPsr4 = array (
-        'E' => 
+        'A' => 
         array (
-            'ExemploPDOMysql\\' => 16,
+            'AULA_PHP\\' => 9,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'ExemploPDOMysql\\' => 
+        'AULA_PHP\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

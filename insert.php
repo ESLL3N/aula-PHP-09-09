@@ -3,9 +3,10 @@ require_once './vendor/autoload.php';
 
 use PDO;
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-$bd = new PDO('mysql:host=localhost;dbname=biblioteca', 'root', '');
-$comando = $bd->prepare('INSERT INTO generos(nome) values (:nome)');
-$comando-> execute(['nome' => $_POST['nome']]);
+    $bd = new PDO('mysql:host=localhost;dbname=biblioteca', 'root', '');
+    $comando = $bd->prepare('INSERT INTO generos(nome) values (:nome)');
+    $comando-> execute(['nome' => $_POST['nome']]);
+    header('Location:index.php');
 }
 ?>
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ $comando-> execute(['nome' => $_POST['nome']]);
     <form action="insert.php" method= post>
         <label for="nome">Nome</label>
         <input type="text" name="name" id="">
-        <button type="button">Salvar</button>
+        <button type="submit">Salvar</button>
     </form>
 </body>
 </html>

@@ -1,7 +1,7 @@
 {
     "autoload": {
         "psr-4": {
-            "ExemploPDOMysql\\" : "src/"
+            "AULA_PHP\\" : "src/"
         }
     }
 }
