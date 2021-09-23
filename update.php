@@ -1,3 +1,26 @@
+<?php
+
+    require_once './vendor/autoload.php';
+
+    use AULA_PHP\MySQLConnection;
+    $bd = new MySQLConnection();
+
+    if($_SERVER['REQUEST_METHOD'] == 'GET') {
+        $comando =$bd->prepare('SELECT * FROM generos WHERE id = id');
+        $comando->execute([':id' => $_GET['id']]);
+        $genero = $comando->fetch(PDO::FETCH_ASSOC);
+    } else {
+        $comando = $bd->prepare('UPDATE generos SET nome =:nome WHERE id =:id');
+        $comando->execute([
+            ':nome' => $_POST['nome'],
+            ':id' => $_POST['id']
+        ]);
+        header('Location:/index.php');
+    }
+
+   
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +30,11 @@
     <title>Editar Gênero</title>
 </head>
 <body>
-    <h1>Novo Genero</h1>
-    <form action="insert.php" method= post>
+    <h1>Editar</h1>
+    <form action="update.php" method= "post">
+        <input type="hidden" name="id" value="<?php echo $genero['id']?>"/>
         <label for="nome">Nome</label>
-        <input type="text" name="name" id="">
+        <input type="text" name="nome" value="<?=$genero['nome'] ?>"/>
         <button type="submit">Salvar</button>
     </form>
 </body>

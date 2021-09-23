@@ -5,11 +5,12 @@ use AULA_PHP\MySQLConnection; //PDO;
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $bd = new MySQLConnection; //new PDO('mysql:host=localhost;dbname=biblioteca', 'root', '');
     $comando = $bd->prepare('INSERT INTO generos(nome) values (:nome)');
-    $comando-> execute(['nome' => $_POST['nome']]);
+    $comando->execute(['nome' => $_POST['nome']]);
     header('Location:index.php');
 }
 ?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
