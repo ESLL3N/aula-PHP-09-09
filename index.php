@@ -3,7 +3,7 @@ require_once './vendor/autoload.php';
 
 use AULA_PHP\MySQLConnection; //PDO;
 
-$bd = new MySQLConnection('mysql:host=localhost;dbname=biblioteca', 'root', '');
+$bd = new MySQLConnection(); //('mysql:host=localhost;dbname=biblioteca', 'root', '');
 
 $comando = $bd->prepare('select * from generos');
 $comando-> execute();
