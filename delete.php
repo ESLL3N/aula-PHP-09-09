@@ -30,10 +30,10 @@
 </head>
 <body>
     <h1>Deletar</h1>
-    <p>Tem certeza que quer remover o gênero <?= $genero['nome'] ?> ?</p>
-    <form action="delete.php" method= "post">
+    <p>Tem certeza que quer remover o gênero "<?= $genero['nome'] ?>" ?</p>
+    <form action="delete.php" method="post">
         <input type="hidden" name="id" value="<?= $genero['id'] ?>"/>
         <button type="submit">Excluir</button>
-    </form>
-</body>
+        </form>
+    </body>
 </html>

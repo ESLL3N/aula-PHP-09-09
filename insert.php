@@ -5,7 +5,7 @@ use AULA_PHP\MySQLConnection; //PDO;
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $bd = new MySQLConnection; //new PDO('mysql:host=localhost;dbname=biblioteca', 'root', '');
     $comando = $bd->prepare('INSERT INTO generos(nome) values (:nome)');
-    $comando->execute(['nome' => $_POST['nome']]);
+    $comando->execute([':nome' => $_POST['nome']]);
     header('Location:index.php');
 }
 ?>
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     <h1>Novo Genero</h1>
     <form action="insert.php" method= post>
         <label for="nome">Nome</label>
-        <input type="text" name="name" id="">
+        <input type="text" name="nome" id="">
         <button type="submit">Salvar</button>
     </form>
 </body>
