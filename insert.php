@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 <input class="form-control" type="text" name="nome" id="">
             </div>
             <br>
+            <a class="btn btn-secondary" href="index.php">Voltar</a>
             <button class="btn btn-success" type="submit">Salvar</button>
         </form>
 
