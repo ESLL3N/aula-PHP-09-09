@@ -32,8 +32,9 @@
     <title>Editar Gênero</title>
 </head>
 <body>
-    <main class="container">
-        <h1>Editar</h1>
+    <div class="container">
+    <main class="my-container">
+        <h1>EDITAR</h1>
         <form action="update.php" method= "post">
             <div class="form-group">
             <input type="hidden" name="id" value="<?php echo $genero['id']?>"/>
@@ -45,5 +46,6 @@
             <button class="btn btn-success" type="submit">Salvar</button>
         </form>
     </main>
+    </div>
 </body>
 </html>

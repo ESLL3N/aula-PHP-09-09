@@ -21,8 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     <title>Document</title>
 </head>
 <body>
-    <main class="container">
-        <h1>Novo Genero</h1>
+    <div class="container">
+    <main class="my-container">
+        <h1>Novo Gênero</h1>
         <form action="insert.php" method= post>
             <div class="form-group">
                 <label for="nome">Nome</label>
@@ -34,5 +35,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         </form>
 
     </main>
-</body>
+    </div>
 </html>

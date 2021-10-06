@@ -1,8 +1,32 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+* {
+    --negrito-color: bolder;
+}
 
 body {
-    margin-top: 50px;
     font-family: 'Poppins', sans-serif;
+    
+}
+
+h1 {
+    font-weight: var(--negrito-color);
+}
+
+.my-container {
+    width: 50vw;
+    border: solid 0.1px;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.container .my-container {
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+.table {
+    margin-block: 20px;
 }
