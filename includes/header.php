@@ -7,5 +7,24 @@
     <title><?= $_title ?> </title>
 </head>
 <body>
-    <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">Biblioteca</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.php">Gêneros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/list_livros.php">Livros</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+        <div class="container">
         <main class="my-container">
