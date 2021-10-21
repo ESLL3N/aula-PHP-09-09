@@ -9,20 +9,12 @@ $comando = $bd->prepare('select * from generos');
 $comando-> execute();
 $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
 
+$_title ='Gêneros';
 
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>BIBLIOTECA</title>
-</head>
-<body>
-    <div class="container">
-        <main class="my-container">
+<?php include('./includes/header.php'); ?>
+
             <a class="btn btn-primary" href="insert.php">ADICIONAR NOVO GÊNERO</a>
             
                     <table class="table table-borderless">
@@ -40,8 +32,5 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
                             </tr>
                             <?php endforeach ?>
                         </table>
-         </main>
-    </div>     
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-</body>
-</html>
+         
+            <?php include('./includes/footer.php')?>
