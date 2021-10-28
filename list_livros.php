@@ -9,6 +9,7 @@ $comando = $bd->prepare('select * from livros');
 $comando-> execute();
 $livros = $comando->fetchAll(PDO::FETCH_ASSOC);
 
+$_title = "Livros"
 ?>
 
 <?php include('./includes/header.php'); ?>

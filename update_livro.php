@@ -15,7 +15,7 @@ $comando_l =$bd->prepare('SELECT * FROM livros WHERE id = :id');
 $comando_l->execute([':id' => $_GET['id']]);
 $livro = $comando->fetchAll(PDO::FETCH_ASSOC);
 } else {
-    $comando =$bd->prepare('INSERT INTO livros);
+    $comando =$bd->prepare('UPDATE livros SET titulo = :titulo, id_genero = :genero WHERE id =:id');
     $comando->execute([
     ':titulo' => $_POST['titulo'],
     ':genero' => $_POST['genero'],
